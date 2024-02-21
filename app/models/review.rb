@@ -4,4 +4,6 @@ class Review < ApplicationRecord
   validates :content, :rating, presence: true
   validates :rating, numericality: { only_integer: true }
   validates_inclusion_of :rating, in: (0..5)
+
+  RANGE = (0..5).to_a
 end

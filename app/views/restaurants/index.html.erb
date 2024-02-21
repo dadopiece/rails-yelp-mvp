@@ -1,0 +1,19 @@
+<h1>ALL RESTAURANTS ⭐️🍽️</h1>
+
+<div class="card-body">
+<div class="alert alert-success" >
+<p><%= link_to "+ Add A Restaurant", new_restaurant_path %></p>
+</div>
+</div>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <div class="card-body" >
+    <li class="list-group-item list-group-item-light" >
+    <%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
+    <%= ", #{restaurant.category} food"%>
+    </li>
+
+    </div>
+  <% end %>
+</ul>
